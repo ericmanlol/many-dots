@@ -16,11 +16,15 @@ RUN apt update
 RUN apt install -y \
 	neovim \
 	curl \
-	git
+	git \
+	silversearcher-ag \
+	build-essential
 
-WORKDIR /configs
-COPY . /configs/
+WORKDIR /many-dots
+COPY . /many-dots/
 
 RUN mkdir -p ~/.config/nvim
 
-RUN ./config-nvim.sh
+RUN make nv
+
+RUN nvim +'PlugInstall --sync' +qa
