@@ -1,6 +1,18 @@
-sudo docker build -t ericmanlol/neovim:latest -t ericmanlol/neovim:v0.1 .
+# many-dots
+
+##### pre-reqs
+
+1. linux (tested on ubuntu 20.04)
+2. docker
 
 
-sudo docker run --name nv --rm -i -t ericmanlol/neovim:latest
+##### build & run
+
+`make br`
+
+
+.
+.
+fin
 
 
