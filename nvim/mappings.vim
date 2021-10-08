@@ -28,3 +28,7 @@ nnoremap <Leader>, <C-w>p
 nnoremap <silent> <Leader>p :let @+=expand("%:p")<cr>:echo "Copied current file
       \ path '".expand("%:p")."' to clipboard"<cr>
 
+" <Leader>f: find file under current directory
+nnoremap <silent> <leader>f :FZF<cr>
+" <Leader>F: find file under home directory
+nnoremap <silent> <leader>F :FZF ~<cr>
