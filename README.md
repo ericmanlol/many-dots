@@ -10,10 +10,13 @@ I don't have a set plan, instead opting for the organic|scenic route #soulsurfin
 1. docker
 2. possibly you
 
+
 ##### build & run
 
-`make br`
-
+```
+# clone this repo and then run:
+cd many-dots/ && make br`
+```
 
 ##### interact
 
