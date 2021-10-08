@@ -21,11 +21,11 @@ nnoremap <silent> <Leader>2 :TagbarToggle<cr>
 " <Leader>tab: Toggles NERDTree
 nnoremap <silent> <Leader><tab> :NERDTreeToggle<cr>
 
-" <Leader>w: Switch to previous split
-nnoremap <Leader>w <C-w>p
+" <Leader>,: Switch to previous split
+nnoremap <Leader>, <C-w>p
 
-" <Leader>,: Switch to next split
-nnoremap <Leader>, <C-w>w
+" <Leader>;: Switch to next split
+nnoremap <Leader>; <C-w>w
 
 " <Leader>p: Copy the full path of the current file to the clipboard
 nnoremap <silent> <Leader>p :let @+=expand("%:p")<cr>:echo "Copied current file
@@ -48,5 +48,9 @@ nnoremap <silent> <leader>e :e $MYVIMRC<cr>
 
 " <Leader>b: get some buffers, always a good thing  
 nnoremap <silent> <leader><space> :Buffers<cr>
+
+" <Leader>q: quit
+nnoremap <silent> <leader>q :q<cr>
+
 
 

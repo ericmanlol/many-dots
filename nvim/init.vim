@@ -95,6 +95,9 @@ set title
 
 set modifiable
 
+set splitbelow
+set splitright
+
 " Load all vim configs
 let config_list = [
       \ 'config.vim',
