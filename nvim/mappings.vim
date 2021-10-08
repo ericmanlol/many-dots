@@ -21,6 +21,10 @@ nnoremap <silent> <Leader>2 :TagbarToggle<cr>
 " <Leader>tab: Toggles NERDTree
 nnoremap <silent> <Leader><tab> :NERDTreeToggle<cr>
 
+" <Leader>n: NERDTree find
+nnoremap <silent> <Leader>n :NERDTreeFind<cr>
+
+
 " <Leader>,: Switch to previous split
 nnoremap <Leader>, <C-w>p
 
@@ -52,5 +56,11 @@ nnoremap <silent> <leader><space> :Buffers<cr>
 " <Leader>q: quit
 nnoremap <silent> <leader>q :q<cr>
 
+" <Leader>|: vsplit
+nnoremap <silent> <leader>\ :vsplit<cr>
+
+" <Leader>-: vsplit
+nnoremap <silent> <leader>- :split<cr>
 
 
+:imap jj <Esc> 

@@ -25,6 +25,12 @@ endif
 
 set nocompatible 
 
+" Color Config
+if (has("termguicolors"))
+ set termguicolors
+endif
+set background=dark
+
 call plug#begin("~/.config/nvim/plugged")
   Plug 'morhetz/gruvbox'
   "File explorer"
@@ -38,13 +44,12 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'airblade/vim-rooter'
+  " tab bar
+  Plug 'kyazdani42/nvim-web-devicons'
+  "Plug 'romgrk/barbar.nvim'
 call plug#end()
 
-" Color Config
-if (has("termguicolors"))
- set termguicolors
-endif
-set background=dark
+
 colorscheme gruvbox
 
 " Lightline
