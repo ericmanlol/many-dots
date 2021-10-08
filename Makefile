@@ -2,23 +2,22 @@ SHELL := /bin/bash
 
 VERSION := localbuild-unsafe
 
+USER ?= $(shell whoami)
+
 PROJECT_NAME = $(notdir $(PWD))
 
 .PHONY : br build nv run all build-no-cache
 
 all: build run
-br: build run 
+br: all
 
 build:
-	@echo "b is $$0"
-	@echo v$(VERSION)
-	@echo $(PROJECT_NAME)
-	sudo docker build -t ericmanlol/$(PROJECT_NAME):latest \
-		-t ericmanlol/$(PROJECT_NAME):v$(VERSION) .
+	sudo docker build -t $(USER)/$(PROJECT_NAME):latest \
+		-t $(USER)/$(PROJECT_NAME):v$(VERSION) .
 
 build-no-cache:
-	sudo docker build -t ericmanlol/$(PROJECT_NAME):latest \
-		-t ericmanlol/$(PROJECT_NAME):v$(VERSION) .
+	sudo docker build -t $(USER)/$(PROJECT_NAME):latest \
+		-t $(USER)/$(PROJECT_NAME):v$(VERSION) .
 
 nv:
 	ln -s $(PWD)/nvim/init.vim ~/.config/nvim/init.vim
@@ -29,6 +28,6 @@ nv:
 run:
 	@echo running
 	sudo docker run -it --volume $(PWD):/$(PROJECT_NAME) \
-		--name nv --rm -i -t ericmanlol/$(PROJECT_NAME):latest
+		--name nv --rm -i -t $(USER)/$(PROJECT_NAME):latest
 
 
