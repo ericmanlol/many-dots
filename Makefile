@@ -21,9 +21,10 @@ build-no-cache:
 		-t ericmanlol/$(PROJECT_NAME):v$(VERSION) .
 
 nv:
+	ln -s $(PWD)/nvim/init.vim ~/.config/nvim/init.vim
+	ln -s $(PWD)/nvim/mappings.vim ~/.config/nvim/mappings.vim
 	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	ln -s $(PWD)/neovim/init.vim ~/.config/nvim/init.vim 
 
 run:
 	@echo running

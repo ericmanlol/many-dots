@@ -18,7 +18,11 @@ RUN apt install -y \
 	curl \
 	git \
 	silversearcher-ag \
-	build-essential
+	build-essential \ 
+	fzf \
+  ripgrep \
+  universal-ctags \
+  fd-find
 
 WORKDIR /many-dots
 COPY . /many-dots/
