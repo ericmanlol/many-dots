@@ -32,3 +32,4 @@ RUN mkdir -p ~/.config/nvim
 RUN make nv
 
 RUN nvim +'PlugInstall --sync' +qa
+
