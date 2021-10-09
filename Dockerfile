@@ -20,9 +20,9 @@ RUN apt install -y \
 	silversearcher-ag \
 	build-essential \ 
 	fzf \
-  ripgrep \
-  universal-ctags \
-  fd-find
+  	ripgrep \
+ 	universal-ctags \
+  	fd-find
 
 WORKDIR /many-dots
 COPY . /many-dots/
