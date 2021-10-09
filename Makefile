@@ -16,7 +16,7 @@ build:
 		-t $(USER)/$(PROJECT_NAME):v$(VERSION) .
 
 build-no-cache:
-	sudo docker build -t $(USER)/$(PROJECT_NAME):latest \
+	sudo docker build --no-cache -t $(USER)/$(PROJECT_NAME):latest \
 		-t $(USER)/$(PROJECT_NAME):v$(VERSION) .
 
 nv:
