@@ -2,11 +2,21 @@
 " Leader Key Mappings {{{
 "===============================================================================
 
-" Map leader and localleader key to comma
-let mapleader = ","
-let g:mapleader = ","
-let maplocalleader = ","
-let g:maplocalleader = ","
+"" Map leader and localleader key to comma
+"let mapleader = ","
+"let g:mapleader = ","
+"let maplocalleader = ","
+"let g:maplocalleader = ","
+
+
+" Map leader and localleader key to space
+" https://stackoverflow.com/questions/446269/can-i-use-space-as-mapleader-in-vim
+nnoremap <SPACE> <Nop>
+
+let mapleader = " "
+let g:mapleader = " "
+let maplocalleader = " "
+let g:maplocalleader = " "
 
 
 " <Leader>``: Force quit all
@@ -29,7 +39,7 @@ nnoremap <silent> <Leader>n :NERDTreeFind<cr>
 nnoremap <Leader>, <C-w>p
 
 " <Leader>;: Switch to next split
-nnoremap <Leader>; <C-w>w
+noremap <Leader>; <C-w>w
 
 " <Leader>p: Copy the full path of the current file to the clipboard
 nnoremap <silent> <Leader>p :let @+=expand("%:p")<cr>:echo "Copied current file
@@ -50,10 +60,7 @@ nnoremap <silent> <leader>r :source $MYVIMRC<cr>
 " <Leader>e: edit vim config 
 nnoremap <silent> <leader>e :e $MYVIMRC<cr>
 
-" <Leader>b: get some buffers, always a good thing  
-nnoremap <silent> <leader><space> :Buffers<cr>
-
-" <Leader>q: quit
+" <Leader>b: summon ze buffers
 nnoremap <silent> <leader>q :q<cr>
 
 " <Leader>|: vsplit
