@@ -24,7 +24,7 @@ build-no-cache:
 
 nv:
 	for nconfig in $(NCONFIGS); do \
-			ln -s ${PWD}/nvim/$${nconfig}.vim ~/.config/nvim/$${nconfig}.vim; \
+		ln -s ${PWD}/nvim/$${nconfig}.vim ~/.config/nvim/$${nconfig}.vim; \
 	done
 
 run:
