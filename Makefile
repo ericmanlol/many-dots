@@ -6,10 +6,13 @@ USER ?= $(shell whoami)
 
 PROJECT_NAME = $(notdir $(PWD))
 
+NCONFIGS = init mappings autocmd
+
 .PHONY : br build nv run all build-no-cache
 
 all: build run
 br: all
+brc: build-no-cache run
 
 build:
 	sudo docker build -t $(USER)/$(PROJECT_NAME):latest \
@@ -20,10 +23,9 @@ build-no-cache:
 		-t $(USER)/$(PROJECT_NAME):v$(VERSION) .
 
 nv:
-	ln -s $(PWD)/nvim/init.vim ~/.config/nvim/init.vim
-	ln -s $(PWD)/nvim/mappings.vim ~/.config/nvim/mappings.vim
-	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	for nconfig in $(NCONFIGS); do \
+			ln -s ${PWD}/nvim/$${nconfig}.vim ~/.config/nvim/$${nconfig}.vim; \
+	done
 
 run:
 	@echo running
