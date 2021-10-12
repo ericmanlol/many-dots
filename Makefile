@@ -27,6 +27,10 @@ nv:
 		ln -s ${PWD}/nvim/$${nconfig}.vim ~/.config/nvim/$${nconfig}.vim; \
 	done
 
+tmux:
+	git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
+	ln -s ${PWD}/tmux.conf ~/.tmux.conf
+
 run:
 	@echo running
 	sudo docker run -it --volume $(PWD):/$(PROJECT_NAME) \
