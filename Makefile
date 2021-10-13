@@ -24,12 +24,12 @@ build-no-cache:
 
 nv:
 	for nconfig in $(NCONFIGS); do \
-		ln -s ${PWD}/nvim/$${nconfig}.vim ~/.config/nvim/$${nconfig}.vim; \
+		ln -sf ${PWD}/nvim/$${nconfig}.vim ~/.config/nvim/$${nconfig}.vim; \
 	done
 
 tmux:
 	git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
-	ln -s ${PWD}/tmux.conf ~/.tmux.conf
+	ln -sf ${PWD}/tmux.conf ~/.tmux.conf
 
 run:
 	@echo running

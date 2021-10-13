@@ -1,3 +1,7 @@
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+endif
+
 let g:vim_home = get(g:, 'vim_home', expand('~/.config/nvim/'))
 
 "---- vim-plug setup  ----
@@ -23,7 +27,6 @@ endif
 "-------- end vim-plug setup ----
 
 
-set nocompatible 
 
 " Color Config
 if (has("termguicolors"))
