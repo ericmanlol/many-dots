@@ -16,7 +16,7 @@ I don't have a set plan, instead opting for the organic|scenic route for fun & l
 
 ```
 # clone this repo and then run:
-cd many-dots/ && make br`
+cd many-dots/ && make br
 ```
 
 ##### interact
