@@ -51,6 +51,10 @@ call plug#begin("~/.config/nvim/plugged")
   "Plug 'romgrk/barbar.nvim'
   "Comment powers
   Plug 'preservim/nerdcommenter'
+  "Gitgutter
+  Plug 'airblade/vim-gitgutter'
+  "vim-fugitive
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 

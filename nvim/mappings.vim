@@ -61,6 +61,9 @@ nnoremap <silent> <leader>r :source $MYVIMRC<cr>
 nnoremap <silent> <leader>e :e $MYVIMRC<cr>
 
 " <Leader>b: summon ze buffers
+nnoremap <silent> <leader><space> :Buffers<cr>
+
+" quit
 nnoremap <silent> <leader>q :q<cr>
 
 " <Leader>|: vsplit
