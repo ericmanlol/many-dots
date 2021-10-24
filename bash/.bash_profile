@@ -22,4 +22,9 @@ eval "$(dircolors)"
 # load after
 . .aliases
 
+# asdf
+. $HOME/.asdf/asdf.sh || true
+. $HOME/.asdf/completions/asdf.bash || true
+
 set +x
+

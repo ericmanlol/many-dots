@@ -27,7 +27,6 @@ endif
 "-------- end vim-plug setup ----
 
 
-
 " Color Config
 if (has("termguicolors"))
  set termguicolors
@@ -50,6 +49,8 @@ call plug#begin("~/.config/nvim/plugged")
   " tab bar
   Plug 'kyazdani42/nvim-web-devicons'
   "Plug 'romgrk/barbar.nvim'
+  "Comment powers
+  Plug 'preservim/nerdcommenter'
 call plug#end()
 
 
