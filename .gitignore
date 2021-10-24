@@ -4,3 +4,4 @@ nvim/autoload/*
 **/nvim/plugged/**
 **/nim/autoload/**
 myrecording
+scratchpad

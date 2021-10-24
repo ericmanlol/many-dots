@@ -3,20 +3,20 @@
 "===============================================================================
 
 "" Map leader and localleader key to comma
-"let mapleader = ","
-"let g:mapleader = ","
-"let maplocalleader = ","
-"let g:maplocalleader = ","
+let mapleader = ","
+let g:mapleader = ","
+let maplocalleader = ","
+let g:maplocalleader = ","
 
 
 " Map leader and localleader key to space
 " https://stackoverflow.com/questions/446269/can-i-use-space-as-mapleader-in-vim
-nnoremap <SPACE> <Nop>
+"nnoremap <SPACE> <Nop>
 
-let mapleader = " "
-let g:mapleader = " "
-let maplocalleader = " "
-let g:maplocalleader = " "
+"let mapleader = " "
+"let g:mapleader = " "
+"let maplocalleader = " "
+"let g:maplocalleader = " "
 
 
 " <Leader>``: Force quit all
